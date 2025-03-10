@@ -22,11 +22,11 @@ Objectifs du projet:
 Ce projet est entièrement personnel, indépendant de mon cursus universitaire, et actuellement développé en solo.
 
 **Je le rends public pour deux raisons principales :**
-   - Un manque d’outils adaptés sur le marché
+   - Un manque d’outils adaptés sur le marché:
         Je n’ai pas trouvé d’outil correspondant à mes besoins, à la fois accessible et efficace.
         La plupart des solutions existantes (comme Finary) sont plus axées sur la gestion de patrimoine que sur la gestion fine de portefeuille.
         Mon objectif n’est pas de monétiser cette application, mais de l’utiliser pour améliorer mes propres investissements.
-  -  Une ouverture à la collaboration
+  -  Une ouverture à la collaboration:
         Je ne suis pas fermé à l’idée de travailler avec d’autres développeurs ou investisseurs intéressés par l’évolution du projet.
 
 **📌 Structure du projet:**
