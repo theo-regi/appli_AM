@@ -1,31 +1,45 @@
+**Projet de Monitoring et Gestion de Portefeuille:**
+**Disclaimer: Cette application est un projet personnel et ne constitue en aucun cas un conseil en investissement ou un service professionnel de gestion de portefeuille.
+    Des erreurs de méthodologie, de calcul ou liées à la qualité des données sont possibles. Ne pas se fier aveuglément aux résultats générés par l’application.**
+
 By REGI THEO
 
-Projet perso de développement d'une appli de monitoring / gestion de portefeuille.
-J'ai appris beaucoup de choses en 5 années d'études, beaucoup de concepts théoriques, sur beaucoup de classes d'actifs, et beaucoup d'approches de la macro au très particuliers produits structurés.
-J'ai envie de compiler et fusionner toutes ces choses pour créer mon outil de gestion de portefeuille, seul la compréhension et la compilation d'énorméments de facteurs, et d'obtention d'une vue globale
-peut faire de moi un bon investisseur.
+**Introduction:**
 
-But:
-  - Une interface de gestion et monitoring de portefeuille sur Streamlit,
-  - Des fonctionnalités de gestion de portefeuille en théorie moderne (indicateurs de performance - risque, comparaison benchmark, etc),
-  - Une capacité de backtesting et de tests d'intégration de nouveaux actifs dans un portefeuille,
-  - Une capiacité de monitorer plusieurs supports (PEA / CTO / Assurance Vie),
+Projet personnel de développement d’une application de monitoring et de gestion de portefeuille.
+Durant mes cinq années d’études, j’ai acquis de nombreuses connaissances théoriques sur différentes classes d’actifs et diverses approches, allant de la macroéconomie aux produits structurés très spécifiques. Aujourd’hui, j’ai envie de compiler et fusionner ces savoirs pour créer mon propre outil de gestion de portefeuille.
 
-Cette application est un projet personnel, non demandé par mes études, et pour le moment développé en solitaire.
-Je laisse ce projet en publique pour deux raisons:
-  - Je ne trouve pas ce que je recherche, à la fois pas cher, et attrayant sur internet (finary et autres sont accès gestion de patrimoine, et pas suffisament portefeuille à mon sens).
-    Par conséquent, étant donné que cette application n'est qu'un projet personnel et en cours de développement, je ne compte pas en monétiser l'utilisation. J'espère en retirer
-    des bénéfices dans mes investissements personnels.
-  - Je ne suis pas fermé à une possible collaboration dans le développement / évolution de l'application.
+Selon moi, seule une compréhension approfondie et une analyse globale de multiples facteurs permettent de devenir un bon investisseur.
+Objectifs du projet:
+    - Développer une interface de gestion et de monitoring de portefeuille sur Streamlit.
+    - Intégrer des fonctionnalités de gestion de portefeuille basées sur la théorie moderne (indicateurs de performance et de risque, comparaison avec un benchmark, etc.).
+    - Ajouter une capacité de backtesting et des tests d’intégration de nouveaux actifs dans un portefeuille.
+    - Offrir la possibilité de suivre plusieurs types de supports (PEA, CTO, Assurance Vie).
 
-Pour comprendre la structure visée du projet: https://www.canva.com/design/DAGhVD4mTjU/R6Lwg6Xea7_ALyUm0m8vRg/edit
 
-Les datas seront le problème majeur, je n'ai pour le moment pas résolu et déterminé de source primaire.
+**Pourquoi ce projet ?**
+Ce projet est entièrement personnel, indépendant de mon cursus universitaire, et actuellement développé en solo.
 
-Disclaimer: Cette application est un projet personnel, ne consiste en aucun cas un conseil en investissement ou un service professionnel de gestion de portefeuille.
-            Des erreurs de méthodologie / calculs / ou liées à la qualité des données sont possibles, donc ne pas se fier à de possibles résultats.
+**Je le rends public pour deux raisons principales :**
+    Un manque d’outils adaptés sur le marché
+        Je n’ai pas trouvé d’outil correspondant à mes besoins, à la fois accessible et efficace.
+        La plupart des solutions existantes (comme Finary) sont plus axées sur la gestion de patrimoine que sur la gestion fine de portefeuille.
+        Mon objectif n’est pas de monétiser cette application, mais de l’utiliser pour améliorer mes propres investissements.
 
-Pour le contexte, j'ai un portefeuille perso (divisé en plusieurs poches / supports), mais je ne suis pas satisfait de celui-ci, c'est plus de la construction au feeling qu'une
-approche pragmatique / structurée. L'état de mes positions est consultable: https://app.finary.com/v2/share/df761067db5f795df576
+    Une ouverture à la collaboration
+        Je ne suis pas fermé à l’idée de travailler avec d’autres développeurs ou investisseurs intéressés par l’évolution du projet.
 
-Je pense que la transparence est la meilleure des démarches !! 
+**📌 Structure du projet:**
+Pour comprendre la structure visée, voici un schéma explicatif : 
+- https://www.canva.com/design/DAGhVD4mTjU/R6Lwg6Xea7_ALyUm0m8vRg/edit?utm_content=DAGhVD4mTjU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+**Problématique des données:**
+L’un des principaux défis sera l’accès aux données financières. Pour le moment, je n’ai pas encore identifié de source principale fiable. FEEL FREE TO SHARE
+
+**Contexte personnel:**
+Je gère actuellement un portefeuille personnel divisé en plusieurs poches et supports. Cependant, je ne suis pas pleinement satisfait de mon approche actuelle, qui repose davantage sur l’intuition que sur une méthodologie structurée et pragmatique.
+
+**📌 État de mes positions :** Tu peux consulter :
+- https://app.finary.com/v2/share/df761067db5f795df576
+
+Je suis convaincu que la transparence est essentielle dans une telle démarche ! 🚀
