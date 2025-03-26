@@ -10,32 +10,7 @@ class DataSource(ABC):
     """
     Class to get data from different sources
     """
-    @abstractmethod
-    def get_ticker_as_str(self, isin:str=None) -> str:
-        """
-        Get the ticker of the asset based on the isin and the source of data.
-
-        Input:
-        - isin: str: isin of the asset (optional)
-
-        Returns: str: ticker of the asset
-        """
-
-        pass
-
-    @abstractmethod
-    def fetch_hist_prices(self, isin:str=None, start:str=None, end:str=None) -> pd.Series:
-        """
-        Fetch historical prices of the asset based on the isin, start and end date."
-
-        Input:
-        - isin: str: isin of the asset (optional)
-        - start: str: start date (optional)
-        - end: str: end date (optional)
-
-        Returns: pd.DataFrame: historical prices of the asset
-        """
-        pass
+    
 
 #Class YahooFinance:: to get data from Yahoo Finance
 class YahooFinance(DataSource): #Could be continuer with other functionnalities
@@ -155,3 +130,31 @@ class YahooFinance(DataSource): #Could be continuer with other functionnalities
         except Exception as e:
             print(f"Error: {e}")
             pass
+
+    def get_current_price(self, isin:str) -> float:
+        """
+        Get the current price of the asset based on the isin.
+
+        Input:
+        - isin: str: isin of the asset
+
+        Returns: float: current price of the asset
+        """
+        try:
+            ticker = yf.Ticker(isin)
+            return ticker.fast_info.last_price
+        except Exception as e:
+            print(f"Error: {e}")
+            pass
+
+
+#-------------------------------------------------------------------------------------------------------
+#----------------------------Common functions------------------ ----------------------------------------
+#-------------------------------------------------------------------------------------------------------
+def calculate_returns(prices):
+    return prices.pct_change().dropna()
+
+def calculate_tracks(returns):
+    tracks = (1 + returns).cumprod()
+    tracks.iloc[0] = 1
+    return tracks
