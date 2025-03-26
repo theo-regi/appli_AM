@@ -1,7 +1,9 @@
 """By Régi Théo"""
 from abc import ABC, abstractmethod
-from scripts.common_utilities import DataSource
-import scripts.common_utilities as cu
+from .data_sources import DataSource
+
+from datetime import datetime
+import scripts.calculations as cu
 import pandas as pd
 #-------------------------------------------------------------------------------------------------------
 #----------------------------Script to implement basic types of assets to invest in---------------------
@@ -20,14 +22,18 @@ class Position(ABC):
     - date_achat: str: purchase date of the position (optional)
     - tickers: dict: tickers of the position (optional)
     """
-    def __init__(self, isin:str=None, source: DataSource=None, name:str=None,  pru:float=None, quantity:float=0, date_achat:str=None, tickers:dict=None):
+    def __init__(self, isin:str=None, source: DataSource=None, name:str=None,  pru:float=None, quantity:float=0, date_achat=None, tickers:dict=None):
         self.name = name
         self.isin = isin
 
         self.tickers = tickers
         self.pru = pru
         self.quantity = quantity
-        self.date_achat = date_achat
+        if isinstance(date_achat, str):
+            self.date_achat = datetime.strptime(date_achat, "%Y-%m-%d")
+        else:
+            self.date_achat = date_achat
+
         self.type = None
         self.source = source
 
@@ -49,7 +55,7 @@ class Shares(Position):
     - tickers: dict: tickers of the position (optional)
     """
 
-    def __init__(self, isin:str, source:DataSource, name:str=None, pru:float=None, quantity:float=0, date_achat:str=None, tickers:dict=None):
+    def __init__(self, isin:str, source:DataSource, name:str=None, pru:float=None, quantity:float=0, date_achat=None, tickers:str=None):
         super().__init__(isin, source, name, pru, quantity, date_achat, tickers)
         self.type = 'Shares'
 

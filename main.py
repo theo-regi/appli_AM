@@ -2,15 +2,12 @@
 #-----------------------------------------------------------------------------------------------------
 #------------------------------------SETUP de L'APP---------------------------------------------------
 #-----------------------------------------------------------------------------------------------------
-import subprocess
-import sys
-import os
-#Absolute path to the scripts folder:
-APP_DIR = os.path.dirname(os.path.abspath(__file__))
-#Paths for each files:
-#ASSETS_DIR = os.path.join(APP_DIR, "Assets")
 import streamlit as st
 
+from constants import APP_DIR
+from database import init_db, Session
+from services.portfolio_store import PortfolioStore
+init_db()
 #-------------------------------------------------------------------------------------------------------
 #----------------------------Main Script for the App Architecture---------------------------------------
 #-------------------------------------------------------------------------------------------------------
@@ -20,5 +17,13 @@ if "portolios" not in st.session_state:
 
 if "selected_portfolio" not in st.session_state:
     st.session_state.selected_portfolio = None
+
+#Loading the portfolio database:
+session = Session()
+st.session_state.session = session
+store = PortfolioStore(session)
+loaded = store.load_portfolios()
+for name, ptf in loaded.items():
+    st.session_state.portfolios[name] = ptf
 
 

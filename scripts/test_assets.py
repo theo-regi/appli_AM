@@ -1,7 +1,7 @@
 """By Théo Régi"""
 import unittest
-from assets import Shares
-from common_utilities import YahooFinance
+from scripts.assets import Shares
+from scripts.data_sources import YahooFinance
 
 class TestShares(unittest.TestCase):
     def setUp(self):

@@ -1,9 +1,8 @@
 """By Théo Régi"""
-
 import unittest
-from common_utilities import YahooFinance
-from assets import Shares
-from portfolio import Portfolio
+from scripts.data_sources import YahooFinance
+from scripts.assets import Shares
+from scripts.portfolio import Portfolio
 
 class TestPorfolio(unittest.TestCase):
     def setUp(self):

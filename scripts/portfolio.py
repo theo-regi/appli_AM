@@ -1,9 +1,6 @@
 """By Régi Théo"""
-from scripts.common_utilities import DataSource
 from scripts.assets import Position
 
-import scripts.common_utilities as cu
-import pandas as pd
 from itertools import chain
 #-------------------------------------------------------------------------------------------------------
 #----------------------------Script pour implémenter les classes portefeuilles--------------------------
@@ -135,14 +132,14 @@ class Portfolio:
         return pnl / self.invested_capital
 
     @property
-    def calculate_actual_capital(self) -> float:
+    def actual_capital(self) -> float:
         """
         Calculate the actual capital of the portfolio
 
         Returns: float: actual capital of the portfolio (actual value of the portfolio)
         """
         actual_capital = 0
-        for position in self.positions.values():
+        for position in self.all_positions:
             actual_capital += position.actual_amount
         return actual_capital
 

@@ -43,6 +43,9 @@ else:
     st.subheader("📈 Portfolio Metrics")
     col1, col2, col3 = st.columns(3)
     col1.metric("Invested Capital", f"{ptf.invested_capital:,.2f} €")
-    col2.metric("Unrealized PnL", f"{ptf.calculate_pnl_lat():,.2f} €")
-    col3.metric("PnL (%)", f"{ptf.calculate_pnl_percent_lat():.2%}")
+    col1.metric("Actual Capital", f"{ptf.actual_capital:,.2f} €")
+    col2.metric("Total PnL", f"{ptf.pnl_ptf:,.2f} €")
+    col2.metric("Total PnL (%)", f"{ptf.pnl_percent_ptf:.2%}")
+    col3.metric("Unrealized PnL", f"{ptf.calculate_pnl_lat():,.2f} €")
+    col3.metric("Unrealized PnL (%)", f"{ptf.calculate_pnl_percent_lat():.2%}")
 
