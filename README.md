@@ -29,10 +29,6 @@ Ce projet est entièrement personnel, indépendant de mon cursus universitaire, 
   -  Une ouverture à la collaboration:
         Je ne suis pas fermé à l’idée de travailler avec d’autres développeurs ou investisseurs intéressés par l’évolution du projet.
 
-**📌 Structure du projet:**
-Pour comprendre la structure visée, voici un schéma explicatif : 
-- https://www.canva.com/design/DAGhVD4mTjU/R6Lwg6Xea7_ALyUm0m8vRg/edit?utm_content=DAGhVD4mTjU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
 **Problématique des données:**
 L’un des principaux défis sera l’accès aux données financières. Pour le moment, je n’ai pas encore identifié de source principale fiable. FEEL FREE TO SHARE
 
